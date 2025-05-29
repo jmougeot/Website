@@ -1,65 +1,79 @@
 import React from 'react';
 import './Projects.css';
+import { translations } from '../../translations';
 
 const Projects: React.FC = () => {
+  // Utilisation des traductions françaises (peut être étendu pour le multi-langue plus tard)
+  const t = translations.fr.projects;
+
   const projectsData = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Une plateforme e-commerce moderne avec panier, paiements et gestion des commandes. Interface utilisateur intuitive et expérience d'achat optimisée.",
-      image: "🛒",
-      technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
-      features: ["Paiements sécurisés", "Gestion des stocks", "Interface admin", "Responsive design"],
+      title: t.projectData.cashRegister.title,
+      description: t.projectData.cashRegister.description,
+      image: "🍽️",
+      technologies: ["React Native", "TypeScript", "Firebase", "Node.js"],
+      features: t.projectData.cashRegister.features,
       status: "Terminé",
       link: "#"
     },
     {
       id: 2,
-      title: "Dashboard Analytics",
-      description: "Dashboard interactif pour visualiser des données en temps réel avec graphiques dynamiques et filtres avancés.",
-      image: "📊",
-      technologies: ["React", "D3.js", "Python", "PostgreSQL"],
-      features: ["Graphiques interactifs", "Temps réel", "Filtres avancés", "Export de données"],
-      status: "En cours",
-      link: "#"
-    },
-    {
-      id: 3,
-      title: "Application Mobile",
-      description: "Application mobile cross-platform pour la gestion de tâches avec synchronisation cloud et notifications push.",
-      image: "📱",
-      technologies: ["React Native", "Firebase", "Redux", "Node.js"],
-      features: ["Sync cloud", "Notifications", "Mode hors-ligne", "Collaboration"],
+      title: t.projectData.ecommerce.title,
+      description: t.projectData.ecommerce.description,
+      image: "🛒",
+      technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
+      features: t.projectData.ecommerce.features,
       status: "Terminé",
       link: "#"
     },
     {
+      id: 3,
+      title: t.projectData.dashboard.title,
+      description: t.projectData.dashboard.description,
+      image: "📊",
+      technologies: ["React", "D3.js", "Python", "PostgreSQL"],
+      features: t.projectData.dashboard.features,
+      status: "En cours",
+      link: "#"
+    },
+    {
       id: 4,
-      title: "Portfolio Designer",
-      description: "Site portfolio pour un designer graphique avec galerie interactive et animations fluides.",
-      image: "🎨",
-      technologies: ["Next.js", "Framer Motion", "Tailwind", "Sanity"],
-      features: ["Galerie interactive", "Animations", "CMS intégré", "SEO optimisé"],
+      title: t.projectData.mobileApp.title,
+      description: t.projectData.mobileApp.description,
+      image: "📱",
+      technologies: ["React Native", "Firebase", "Redux", "Node.js"],
+      features: t.projectData.mobileApp.features,
       status: "Terminé",
       link: "#"
     },
     {
       id: 5,
-      title: "API RESTful",
-      description: "API robuste pour une application de gestion avec authentification JWT et documentation Swagger.",
-      image: "🔗",
-      technologies: ["Express.js", "JWT", "Swagger", "Docker"],
-      features: ["Auth sécurisée", "Documentation", "Tests unitaires", "Déploiement auto"],
+      title: t.projectData.portfolio.title,
+      description: t.projectData.portfolio.description,
+      image: "🎨",
+      technologies: ["Next.js", "Framer Motion", "Tailwind", "Sanity"],
+      features: t.projectData.portfolio.features,
       status: "Terminé",
       link: "#"
     },
     {
       id: 6,
-      title: "Chatbot IA",
-      description: "Chatbot intelligent avec traitement du langage naturel pour le support client automatisé.",
+      title: t.projectData.api.title,
+      description: t.projectData.api.description,
+      image: "🔗",
+      technologies: ["Express.js", "JWT", "Swagger", "Docker"],
+      features: t.projectData.api.features,
+      status: "Terminé",
+      link: "#"
+    },
+    {
+      id: 7,
+      title: t.projectData.chatbot.title,
+      description: t.projectData.chatbot.description,
       image: "🤖",
       technologies: ["Python", "OpenAI", "React", "WebSocket"],
-      features: ["IA conversationnelle", "Multi-langues", "Apprentissage", "Intégration"],
+      features: t.projectData.chatbot.features,
       status: "En développement",
       link: "#"
     }
@@ -77,10 +91,9 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2 className="section-title">Mes Projets</h2>
+        <h2 className="section-title">{t.title}</h2>
         <p className="section-subtitle">
-          Découvrez quelques-uns de mes projets récents qui démontrent mes compétences 
-          et ma passion pour le développement web
+          {t.subtitle}
         </p>
 
         <div className="projects-grid">
@@ -104,7 +117,7 @@ const Projects: React.FC = () => {
                 </div>
 
                 <div className="project-features">
-                  <h4>Fonctionnalités clés :</h4>
+                  <h4>{t.labels.keyFeatures}</h4>
                   <ul>
                     {project.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
@@ -115,7 +128,7 @@ const Projects: React.FC = () => {
 
               <div className="project-footer">
                 <a href={project.link} className="project-link">
-                  Voir le projet
+                  {t.labels.viewProject}
                   <span className="link-arrow">→</span>
                 </a>
               </div>
@@ -125,16 +138,15 @@ const Projects: React.FC = () => {
 
         <div className="projects-cta">
           <div className="cta-content">
-            <h3>Vous avez un projet en tête ?</h3>
+            <h3>{t.cta.title}</h3>
             <p>
-              Je suis toujours intéressé par de nouveaux défis et collaborations. 
-              Discutons de votre projet !
+              {t.cta.description}
             </p>
             <button className="cta-button" onClick={() => {
               const element = document.getElementById('contact');
               if (element) element.scrollIntoView({ behavior: 'smooth' });
             }}>
-              Démarrer un projet
+              {t.cta.button}
             </button>
           </div>
         </div>
