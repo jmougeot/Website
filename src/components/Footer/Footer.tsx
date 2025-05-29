@@ -1,7 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../../App';
 import './Footer.css';
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
@@ -14,34 +16,34 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           <div className="footer-main">
             <div className="footer-brand">
-              <h3>Jacques Mougeot</h3>
-              <p>Développeur Full Stack passionné par la création d'expériences numériques exceptionnelles.</p>
+              <h3>{t.footer.brand.name}</h3>
+              <p>{t.footer.brand.description}</p>
             </div>
 
             <div className="footer-links">
               <div className="footer-section">
-                <h4>Navigation</h4>
+                <h4>{t.footer.navigation.title}</h4>
                 <ul>
-                  <li><a href="#hero">Accueil</a></li>
-                  <li><a href="#about">À propos</a></li>
-                  <li><a href="#skills">Compétences</a></li>
-                  <li><a href="#projects">Projets</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#hero">{t.footer.navigation.home}</a></li>
+                  <li><a href="#about">{t.footer.navigation.about}</a></li>
+                  <li><a href="#skills">{t.footer.navigation.skills}</a></li>
+                  <li><a href="#projects">{t.footer.navigation.projects}</a></li>
+                  <li><a href="#contact">{t.footer.navigation.contact}</a></li>
                 </ul>
               </div>
 
               <div className="footer-section">
-                <h4>Projets</h4>
+                <h4>{t.footer.projectsList.title}</h4>
                 <ul>
-                  <li><a href="#projects">Portfolio React</a></li>
-                  <li><a href="#projects">Application E-commerce</a></li>
-                  <li><a href="#projects">Dashboard Analytics</a></li>
-                  <li><a href="#projects">API REST</a></li>
+                  <li><a href="#projects">{t.footer.projectsList.portfolio}</a></li>
+                  <li><a href="#projects">{t.footer.projectsList.ecommerce}</a></li>
+                  <li><a href="#projects">{t.footer.projectsList.dashboard}</a></li>
+                  <li><a href="#projects">{t.footer.projectsList.api}</a></li>
                 </ul>
               </div>
 
               <div className="footer-section">
-                <h4>Technologies</h4>
+                <h4>{t.footer.technologies.title}</h4>
                 <ul>
                   <li>React & TypeScript</li>
                   <li>Node.js & Express</li>
@@ -51,7 +53,7 @@ const Footer: React.FC = () => {
               </div>
 
               <div className="footer-section">
-                <h4>Contact</h4>
+                <h4>{t.footer.contactInfo.title}</h4>
                 <ul>
                   <li>📧 jacques.mougeot@centrale-med.fr</li>
                   <li>📱 +33 6 12 34 56 78</li>
@@ -63,7 +65,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="footer-social">
-            <h4>Suivez-moi</h4>
+            <h4>{t.footer.social.title}</h4>
             <div className="social-icons">
               <a href="https://www.linkedin.com/in/jacquesmougeot/" className="social-icon linkedin" aria-label="LinkedIn">
                 <span>💼</span>

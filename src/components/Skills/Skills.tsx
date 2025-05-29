@@ -1,10 +1,12 @@
 import React from 'react';
+import { useLanguage } from '../../App';
 import './Skills.css';
 
 const Skills: React.FC = () => {
+  const { t } = useLanguage();
   const skillsData = [
     {
-      category: "Frontend",
+      category: t.skills.categories.frontend,
       skills: [
         { name: "React", level: 90, icon: "⚛️" },
         { name: "TypeScript", level: 85, icon: "📘" },
@@ -15,7 +17,7 @@ const Skills: React.FC = () => {
       ]
     },
     {
-      category: "Backend",
+      category: t.skills.categories.backend,
       skills: [
         { name: "Node.js", level: 80, icon: "🟢" },
         { name: "Python", level: 75, icon: "🐍" },
@@ -26,7 +28,7 @@ const Skills: React.FC = () => {
       ]
     },
     {
-      category: "Outils",
+      category: t.skills.categories.tools,
       skills: [
         { name: "Git", level: 88, icon: "🔄" },
         { name: "VS Code", level: 95, icon: "💙" },
@@ -41,9 +43,9 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <h2 className="section-title">Mes Compétences</h2>
+        <h2 className="section-title">{t.skills.title}</h2>
         <p className="section-subtitle">
-          Technologies et outils que je maîtrise pour créer des solutions complètes
+          {t.skills.subtitle}
         </p>
 
         <div className="skills-grid">

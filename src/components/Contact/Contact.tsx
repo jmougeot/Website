@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../../App';
 import './Contact.css';
 
 const Contact: React.FC = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,9 +29,9 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <h2 className="section-title">Me Contacter</h2>
+        <h2 className="section-title">{t.contact.title}</h2>
         <p className="section-subtitle">
-          Une idée de projet ? Une question ? N'hésitez pas à me contacter !
+          {t.contact.description}
         </p>
 
         <div className="contact-content">
@@ -37,7 +39,7 @@ const Contact: React.FC = () => {
             <div className="info-card">
               <div className="info-icon">📧</div>
               <div className="info-text">
-                <h4>Email</h4>
+                <h4>{t.contact.info.email}</h4>
                 <p>jacques.mougeot@centrale-med.fr</p>
               </div>
             </div>
@@ -45,7 +47,7 @@ const Contact: React.FC = () => {
             <div className="info-card">
               <div className="info-icon">📱</div>
               <div className="info-text">
-                <h4>Téléphone</h4>
+                <h4>{t.contact.info.phone}</h4>
                 <p>+33 6 12 34 56 78</p>
               </div>
             </div>
@@ -53,7 +55,7 @@ const Contact: React.FC = () => {
             <div className="info-card">
               <div className="info-icon">📍</div>
               <div className="info-text">
-                <h4>Localisation</h4>
+                <h4>{t.contact.info.location}</h4>
                 <p>France</p>
               </div>
             </div>
@@ -61,13 +63,13 @@ const Contact: React.FC = () => {
             <div className="info-card">
               <div className="info-icon">⏰</div>
               <div className="info-text">
-                <h4>Disponibilité</h4>
+                <h4>{t.contact.info.availability}</h4>
                 <p>Lun - Ven, 9h - 18h</p>
               </div>
             </div>
 
             <div className="social-links">
-              <h4>Retrouvez-moi sur :</h4>
+              <h4>{t.contact.social.title}</h4>
               <div className="social-icons">
                 <a href="https://www.linkedin.com/in/jacquesmougeot/" className="social-link linkedin" target="_blank" rel="noopener noreferrer">
                   <span>💼</span>
@@ -88,7 +90,7 @@ const Contact: React.FC = () => {
           <div className="contact-form-container">
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name">Nom complet</label>
+                <label htmlFor="name">{t.contact.form.name}</label>
                 <input
                   type="text"
                   id="name"
@@ -96,12 +98,12 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="Votre nom"
+                  placeholder={t.contact.form.placeholders.name}
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">{t.contact.form.email}</label>
                 <input
                   type="email"
                   id="email"
@@ -109,12 +111,12 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="votre@email.com"
+                  placeholder={t.contact.form.placeholders.email}
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="subject">Sujet</label>
+                <label htmlFor="subject">{t.contact.form.subject}</label>
                 <input
                   type="text"
                   id="subject"
@@ -122,12 +124,12 @@ const Contact: React.FC = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  placeholder="Sujet de votre message"
+                  placeholder={t.contact.form.placeholders.subject}
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="message">Message</label>
+                <label htmlFor="message">{t.contact.form.message}</label>
                 <textarea
                   id="message"
                   name="message"
@@ -135,12 +137,12 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  placeholder="Décrivez votre projet ou posez votre question..."
+                  placeholder={t.contact.form.placeholders.message}
                 ></textarea>
               </div>
 
               <button type="submit" className="submit-button">
-                <span>Envoyer le message</span>
+                <span>{t.contact.form.send}</span>
                 <span className="button-icon">📤</span>
               </button>
             </form>

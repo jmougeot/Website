@@ -1,39 +1,38 @@
 import React from 'react';
+import { useLanguage } from '../../App';
 import './Projects.css';
-import { translations } from '../../translations';
 
 const Projects: React.FC = () => {
-  // Utilisation des traductions françaises (peut être étendu pour le multi-langue plus tard)
-  const t = translations.fr.projects;
+  const { t } = useLanguage();
 
   const projectsData = [
     {
       id: 1,
-      title: t.projectData.cashRegister.title,
-      description: t.projectData.cashRegister.description,
+      title: t.projects.projectData.cashRegister.title,
+      description: t.projects.projectData.cashRegister.description,
       image: "🍽️",
       technologies: ["React Native", "TypeScript", "Firebase", "Node.js"],
-      features: t.projectData.cashRegister.features,
+      features: t.projects.projectData.cashRegister.features,
       status: "Terminé",
       link: "https://github.com/jmougeot/Projet_innovation"
     },
     {
       id: 2,
-      title: t.projectData.portfolioPWA.title,
-      description: t.projectData.portfolioPWA.description,
+      title: t.projects.projectData.portfolioPWA.title,
+      description: t.projects.projectData.portfolioPWA.description,
       image: "💻",
       technologies: ["React", "TypeScript", "CSS3", "PWA"],
-      features: t.projectData.portfolioPWA.features,
+      features: t.projects.projectData.portfolioPWA.features,
       status: "Terminé",
       link: "https://jacquesmougeot.fr"
     },
     {
       id: 3,
-      title: t.projectData.photogrammetry.title,
-      description: t.projectData.photogrammetry.description,
+      title: t.projects.projectData.photogrammetry.title,
+      description: t.projects.projectData.photogrammetry.description,
       image: "📐",
       technologies: ["Python", "OpenCV", "NumPy", "Matplotlib", "RANSAC"],
-      features: t.projectData.photogrammetry.features,
+      features: t.projects.projectData.photogrammetry.features,
       status: "Terminé",
       link: "https://github.com/jmougeot/MAP"
     }
@@ -51,9 +50,9 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2 className="section-title">{t.title}</h2>
+        <h2 className="section-title">{t.projects.title}</h2>
         <p className="section-subtitle">
-          {t.subtitle}
+          {t.projects.subtitle}
         </p>
 
         <div className="projects-grid">
@@ -77,9 +76,9 @@ const Projects: React.FC = () => {
                 </div>
 
                 <div className="project-features">
-                  <h4>{t.labels.keyFeatures}</h4>
+                  <h4>{t.projects.labels.keyFeatures}</h4>
                   <ul>
-                    {project.features.map((feature, index) => (
+                    {project.features.map((feature: string, index: number) => (
                       <li key={index}>{feature}</li>
                     ))}
                   </ul>
@@ -88,7 +87,7 @@ const Projects: React.FC = () => {
 
               <div className="project-footer">
                 <a href={project.link} className="project-link">
-                  {t.labels.viewProject}
+                  {t.projects.labels.viewProject}
                   <span className="link-arrow">→</span>
                 </a>
               </div>
@@ -98,15 +97,15 @@ const Projects: React.FC = () => {
 
         <div className="projects-cta">
           <div className="cta-content">
-            <h3>{t.cta.title}</h3>
+            <h3>{t.projects.cta.title}</h3>
             <p>
-              {t.cta.description}
+              {t.projects.cta.description}
             </p>
             <button className="cta-button" onClick={() => {
               const element = document.getElementById('contact');
               if (element) element.scrollIntoView({ behavior: 'smooth' });
             }}>
-              {t.cta.button}
+              {t.projects.cta.button}
             </button>
           </div>
         </div>

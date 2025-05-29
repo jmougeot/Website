@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../../App';
 import './Header.css';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,12 +31,29 @@ const Header: React.FC = () => {
         </div>
         
         <nav className={`nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>
-          <a href="#hero" onClick={() => scrollToSection('hero')}>Accueil</a>
-          <a href="#about" onClick={() => scrollToSection('about')}>À propos</a>
-          <a href="#skills" onClick={() => scrollToSection('skills')}>Compétences</a>
-          <a href="#projects" onClick={() => scrollToSection('projects')}>Projets</a>
-          <a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a>
+          <a href="#hero" onClick={() => scrollToSection('hero')}>{t.nav.home}</a>
+          <a href="#about" onClick={() => scrollToSection('about')}>{t.nav.about}</a>
+          <a href="#skills" onClick={() => scrollToSection('skills')}>{t.nav.skills}</a>
+          <a href="#projects" onClick={() => scrollToSection('projects')}>{t.nav.projects}</a>
+          <a href="#contact" onClick={() => scrollToSection('contact')}>{t.nav.contact}</a>
         </nav>
+
+        <div className="header-actions">
+          <div className="language-switcher">
+            <button 
+              className={`lang-btn ${language === 'fr' ? 'active' : ''}`}
+              onClick={() => setLanguage('fr')}
+            >
+              FR
+            </button>
+            <button 
+              className={`lang-btn ${language === 'en' ? 'active' : ''}`}
+              onClick={() => setLanguage('en')}
+            >
+              EN
+            </button>
+          </div>
+        </div>
 
         <button 
           className={`mobile-menu-btn ${isMobileMenuOpen ? 'active' : ''}`}
