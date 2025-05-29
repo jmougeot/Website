@@ -1,7 +1,7 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "homepage": "https://jmougeot.github.io/Website",
+  "name": "jacques-mougeot-portfolio",
+  "version": "1.0.0",
+  "homepage": "https://jacquesmougeot.fr",
   "private": true,
   "dependencies": {
     "cra-template-pwa-typescript": "2.0.0",
