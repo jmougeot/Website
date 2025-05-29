@@ -213,6 +213,14 @@ export interface Translations {
       responseTime: string;
     };
   };
+
+  // PWA Installation
+  pwa: {
+    title: string;
+    description: string;
+    install: string;
+    dismiss: string;
+  };
 }
 
 export const translations: Record<'fr' | 'en', Translations> = {
@@ -417,6 +425,14 @@ export const translations: Record<'fr' | 'en', Translations> = {
         experience: "Années d'expérience",
         responseTime: "Temps de réponse"
       }
+    },
+    
+    // PWA Installation
+    pwa: {
+      title: "Installer l'App",
+      description: "Installez cette application sur votre appareil pour une meilleure expérience et un accès rapide.",
+      install: "Installer",
+      dismiss: "Plus tard"
     }
   },
   en: {
@@ -620,6 +636,14 @@ export const translations: Record<'fr' | 'en', Translations> = {
         experience: "Years of experience",
         responseTime: "Response time"
       }
+    },
+    
+    // PWA Installation
+    pwa: {
+      title: "Install App",
+      description: "Install this app on your device for a better experience and quick access.",
+      install: "Install",
+      dismiss: "Not now"
     }
   }
 };

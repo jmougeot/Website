@@ -7,6 +7,7 @@ import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import PWAInstaller from './components/PWAInstaller/PWAInstaller';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <div className="App">
         <Header />
         <main>
+          
           <Hero />
           <About />
           <Skills />
@@ -22,6 +24,7 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <PWAInstaller />
       </div>
     </LanguageProvider>
   );

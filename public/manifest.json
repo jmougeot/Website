@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Jacques Mougeot",
+  "name": "Jacques Mougeot - Développeur Web & Designer",
+  "description": "Portfolio de Jacques Mougeot - Développeur Full Stack passionné par la création d'expériences numériques exceptionnelles",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,16 +11,32 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait-primary",
+  "theme_color": "#2563eb",
+  "background_color": "#0f1419",
+  "scope": "/",
+  "lang": "fr",
+  "dir": "ltr",
+  "categories": ["portfolio", "developer", "design"],
+  "screenshots": [
+    {
+      "src": "logo512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Portfolio Jacques Mougeot"
+    }
+  ]
 }
