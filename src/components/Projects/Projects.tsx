@@ -16,66 +16,6 @@ const Projects: React.FC = () => {
       features: t.projectData.cashRegister.features,
       status: "Terminé",
       link: "#"
-    },
-    {
-      id: 2,
-      title: t.projectData.ecommerce.title,
-      description: t.projectData.ecommerce.description,
-      image: "🛒",
-      technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
-      features: t.projectData.ecommerce.features,
-      status: "Terminé",
-      link: "#"
-    },
-    {
-      id: 3,
-      title: t.projectData.dashboard.title,
-      description: t.projectData.dashboard.description,
-      image: "📊",
-      technologies: ["React", "D3.js", "Python", "PostgreSQL"],
-      features: t.projectData.dashboard.features,
-      status: "En cours",
-      link: "#"
-    },
-    {
-      id: 4,
-      title: t.projectData.mobileApp.title,
-      description: t.projectData.mobileApp.description,
-      image: "📱",
-      technologies: ["React Native", "Firebase", "Redux", "Node.js"],
-      features: t.projectData.mobileApp.features,
-      status: "Terminé",
-      link: "#"
-    },
-    {
-      id: 5,
-      title: t.projectData.portfolio.title,
-      description: t.projectData.portfolio.description,
-      image: "🎨",
-      technologies: ["Next.js", "Framer Motion", "Tailwind", "Sanity"],
-      features: t.projectData.portfolio.features,
-      status: "Terminé",
-      link: "#"
-    },
-    {
-      id: 6,
-      title: t.projectData.api.title,
-      description: t.projectData.api.description,
-      image: "🔗",
-      technologies: ["Express.js", "JWT", "Swagger", "Docker"],
-      features: t.projectData.api.features,
-      status: "Terminé",
-      link: "#"
-    },
-    {
-      id: 7,
-      title: t.projectData.chatbot.title,
-      description: t.projectData.chatbot.description,
-      image: "🤖",
-      technologies: ["Python", "OpenAI", "React", "WebSocket"],
-      features: t.projectData.chatbot.features,
-      status: "En développement",
-      link: "#"
     }
   ];
 

@@ -82,36 +82,6 @@ export interface Translations {
           description: string;
           features: string[];
         };
-        ecommerce: {
-          title: string;
-          description: string;
-          features: string[];
-        };
-        dashboard: {
-          title: string;
-          description: string;
-          features: string[];
-        };
-        mobileApp: {
-          title: string;
-          description: string;
-          features: string[];
-        };
-        portfolio: {
-          title: string;
-          description: string;
-          features: string[];
-        };
-        api: {
-          title: string;
-          description: string;
-          features: string[];
-        };
-        chatbot: {
-          title: string;
-          description: string;
-          features: string[];
-        };
       };
     labels: {
       keyFeatures: string;
@@ -303,36 +273,6 @@ export const translations: Record<'fr' | 'en', Translations> = {
           title: "Caisse Enregistreuse Restaurant",
           description: "Application mobile cross-platform pour restaurateurs avec fonctionnalités de caisse enregistreuse et gestion du personnel. Projet dirigé avec une équipe de 5 étudiants ingénieurs de l'École Centrale Marseille en partenariat avec Le Caveau du Pressoir.",
           features: ["Gestion des commandes", "Suivi du personnel", "Interface tactile", "Rapports financiers", "Mode hors-ligne"]
-        },
-        ecommerce: {
-          title: "E-Commerce Platform",
-          description: "Une plateforme e-commerce moderne avec panier, paiements et gestion des commandes. Interface utilisateur intuitive et expérience d'achat optimisée.",
-          features: ["Paiements sécurisés", "Gestion des stocks", "Interface admin", "Responsive design"]
-        },
-        dashboard: {
-          title: "Dashboard Analytics",
-          description: "Dashboard interactif pour visualiser des données en temps réel avec graphiques dynamiques et filtres avancés.",
-          features: ["Graphiques interactifs", "Temps réel", "Filtres avancés", "Export de données"]
-        },
-        mobileApp: {
-          title: "Application Mobile",
-          description: "Application mobile cross-platform pour la gestion de tâches avec synchronisation cloud et notifications push.",
-          features: ["Sync cloud", "Notifications", "Mode hors-ligne", "Collaboration"]
-        },
-        portfolio: {
-          title: "Portfolio Designer",
-          description: "Site portfolio pour un designer graphique avec galerie interactive et animations fluides.",
-          features: ["Galerie interactive", "Animations", "CMS intégré", "SEO optimisé"]
-        },
-        api: {
-          title: "API RESTful",
-          description: "API robuste pour une application de gestion avec authentification JWT et documentation Swagger.",
-          features: ["Auth sécurisée", "Documentation", "Tests unitaires", "Déploiement auto"]
-        },
-        chatbot: {
-          title: "Chatbot IA",
-          description: "Chatbot intelligent avec traitement du langage naturel pour le support client automatisé.",
-          features: ["IA conversationnelle", "Multi-langues", "Apprentissage", "Intégration"]
         }
       },
       labels: {
@@ -519,36 +459,6 @@ export const translations: Record<'fr' | 'en', Translations> = {
           title: "Restaurant Cash Register",
           description: "Cross-platform mobile application for restaurateurs with cash register functionality and staff management features. Project led with a team of 5 engineering students from École Centrale Marseille in partnership with Le Caveau du Pressoir restaurant.",
           features: ["Order management", "Staff tracking", "Touch interface", "Financial reports", "Offline mode"]
-        },
-        ecommerce: {
-          title: "E-Commerce Platform",
-          description: "A modern e-commerce platform with shopping cart, payments and order management. Intuitive user interface and optimized shopping experience.",
-          features: ["Secure payments", "Inventory management", "Admin interface", "Responsive design"]
-        },
-        dashboard: {
-          title: "Analytics Dashboard",
-          description: "Interactive dashboard for real-time data visualization with dynamic charts and advanced filters.",
-          features: ["Interactive charts", "Real-time", "Advanced filters", "Data export"]
-        },
-        mobileApp: {
-          title: "Mobile Application",
-          description: "Cross-platform mobile application for task management with cloud synchronization and push notifications.",
-          features: ["Cloud sync", "Notifications", "Offline mode", "Collaboration"]
-        },
-        portfolio: {
-          title: "Designer Portfolio",
-          description: "Portfolio website for a graphic designer with interactive gallery and smooth animations.",
-          features: ["Interactive gallery", "Animations", "Integrated CMS", "SEO optimized"]
-        },
-        api: {
-          title: "RESTful API",
-          description: "Robust API for a management application with JWT authentication and Swagger documentation.",
-          features: ["Secure auth", "Documentation", "Unit tests", "Auto deployment"]
-        },
-        chatbot: {
-          title: "AI Chatbot",
-          description: "Intelligent chatbot with natural language processing for automated customer support.",
-          features: ["Conversational AI", "Multi-language", "Learning", "Integration"]
         }
       },
       labels: {
