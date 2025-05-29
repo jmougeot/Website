@@ -16,6 +16,16 @@ const Projects: React.FC = () => {
       features: t.projectData.cashRegister.features,
       status: "Terminé",
       link: "#"
+    },
+    {
+      id: 2,
+      title: t.projectData.portfolioPWA.title,
+      description: t.projectData.portfolioPWA.description,
+      image: "💻",
+      technologies: ["React", "TypeScript", "CSS3", "PWA"],
+      features: t.projectData.portfolioPWA.features,
+      status: "Terminé",
+      link: "https://jacquesmougeot.fr"
     }
   ];
 

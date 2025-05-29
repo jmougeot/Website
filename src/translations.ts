@@ -82,6 +82,11 @@ export interface Translations {
           description: string;
           features: string[];
         };
+        portfolioPWA: {
+          title: string;
+          description: string;
+          features: string[];
+        };
       };
     labels: {
       keyFeatures: string;
@@ -273,6 +278,11 @@ export const translations: Record<'fr' | 'en', Translations> = {
           title: "Caisse Enregistreuse Restaurant",
           description: "Application mobile cross-platform pour restaurateurs avec fonctionnalités de caisse enregistreuse et gestion du personnel. Projet dirigé avec une équipe de 5 étudiants ingénieurs de l'École Centrale Marseille en partenariat avec Le Caveau du Pressoir.",
           features: ["Gestion des commandes", "Suivi du personnel", "Interface tactile", "Rapports financiers", "Mode hors-ligne"]
+        },
+        portfolioPWA: {
+          title: "Portfolio Web Progressif (PWA)",
+          description: "Site web personnel moderne développé avec React et TypeScript, transformé en Progressive Web App. Interface responsive avec animations fluides, optimisée pour les performances et l'accessibilité.",
+          features: ["Design responsive", "Animations CSS avancées", "PWA Ready", "TypeScript", "Performance optimisée"]
         }
       },
       labels: {
@@ -459,6 +469,11 @@ export const translations: Record<'fr' | 'en', Translations> = {
           title: "Restaurant Cash Register",
           description: "Cross-platform mobile application for restaurateurs with cash register functionality and staff management features. Project led with a team of 5 engineering students from École Centrale Marseille in partnership with Le Caveau du Pressoir restaurant.",
           features: ["Order management", "Staff tracking", "Touch interface", "Financial reports", "Offline mode"]
+        },
+        portfolioPWA: {
+          title: "Progressive Web Portfolio (PWA)",
+          description: "Modern personal website developed with React and TypeScript, transformed into a Progressive Web App. Responsive interface with smooth animations, optimized for performance and accessibility.",
+          features: ["Responsive design", "Advanced CSS animations", "PWA Ready", "TypeScript", "Performance optimized"]
         }
       },
       labels: {
