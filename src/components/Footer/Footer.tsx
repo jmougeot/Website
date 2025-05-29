@@ -1,7 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../../LanguageContext';
 import './Footer.css';
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
@@ -14,56 +16,56 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           <div className="footer-main">
             <div className="footer-brand">
-              <h3>Jacques Mougeot</h3>
-              <p>Développeur Full Stack passionné par la création d'expériences numériques exceptionnelles.</p>
+              <h3>{t.footer.brand.name}</h3>
+              <p>{t.footer.brand.description}</p>
             </div>
 
             <div className="footer-links">
               <div className="footer-section">
-                <h4>Navigation</h4>
+                <h4>{t.footer.navigation.title}</h4>
                 <ul>
-                  <li><a href="#hero">Accueil</a></li>
-                  <li><a href="#about">À propos</a></li>
-                  <li><a href="#skills">Compétences</a></li>
-                  <li><a href="#projects">Projets</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#hero">{t.footer.navigation.home}</a></li>
+                  <li><a href="#about">{t.footer.navigation.about}</a></li>
+                  <li><a href="#skills">{t.footer.navigation.skills}</a></li>
+                  <li><a href="#projects">{t.footer.navigation.projects}</a></li>
+                  <li><a href="#contact">{t.footer.navigation.contact}</a></li>
                 </ul>
               </div>
 
               <div className="footer-section">
-                <h4>Projets</h4>
+                <h4>{t.footer.projectsList.title}</h4>
                 <ul>
-                  <li><a href="#projects">Portfolio React</a></li>
-                  <li><a href="#projects">Application E-commerce</a></li>
-                  <li><a href="#projects">Dashboard Analytics</a></li>
-                  <li><a href="#projects">API REST</a></li>
+                  <li><a href="#projects">{t.footer.projectsList.portfolio}</a></li>
+                  <li><a href="#projects">{t.footer.projectsList.ecommerce}</a></li>
+                  <li><a href="#projects">{t.footer.projectsList.dashboard}</a></li>
+                  <li><a href="#projects">{t.footer.projectsList.api}</a></li>
                 </ul>
               </div>
 
               <div className="footer-section">
-                <h4>Technologies</h4>
+                <h4>{t.footer.technologies.title}</h4>
                 <ul>
-                  <li>React & TypeScript</li>
-                  <li>Node.js & Express</li>
-                  <li>Python & Django</li>
-                  <li>MongoDB & PostgreSQL</li>
+                  <li>{t.footer.technologies.react}</li>
+                  <li>{t.footer.technologies.node}</li>
+                  <li>{t.footer.technologies.python}</li>
+                  <li>{t.footer.technologies.database}</li>
                 </ul>
               </div>
 
               <div className="footer-section">
-                <h4>Contact</h4>
+                <h4>{t.footer.contactInfo.title}</h4>
                 <ul>
-                  <li>📧 jacques.mougeot@email.com</li>
-                  <li>📱 +33 6 12 34 56 78</li>
-                  <li>📍 France</li>
-                  <li>🌐 jacquesmougeot.fr</li>
+                  <li>{t.footer.contactInfo.email}</li>
+                  <li>{t.footer.contactInfo.phone}</li>
+                  <li>{t.footer.contactInfo.location}</li>
+                  <li>{t.footer.contactInfo.website}</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div className="footer-social">
-            <h4>Suivez-moi</h4>
+            <h4>{t.footer.social.title}</h4>
             <div className="social-icons">
               <a href="https://linkedin.com/in/jacques-mougeot" className="social-icon linkedin" aria-label="LinkedIn">
                 <span>💼</span>
@@ -81,10 +83,10 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="footer-cta">
-            <h4>🚀 Prêt à collaborer ?</h4>
-            <p>Transformons vos idées en réalité numérique</p>
+            <h4>{t.footer.cta.title}</h4>
+            <p>{t.footer.cta.description}</p>
             <a href="#contact" className="cta-button">
-              Démarrer un projet
+              {t.footer.cta.button}
               <span>✨</span>
             </a>
           </div>
@@ -93,28 +95,28 @@ const Footer: React.FC = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <div className="copyright">
-              <p>&copy; {currentYear} Jacques Mougeot. Tous droits réservés.</p>
-              <p>Conçu et développé avec ❤️ en France</p>
+              <p>&copy; {currentYear} {t.footer.brand.name}. {t.footer.bottom.copyright}</p>
+              <p>{t.footer.bottom.madeWith}</p>
             </div>
 
             <div className="footer-stats">
               <div className="stat-item">
                 <span className="stat-number">50+</span>
-                <span className="stat-label">Projets réalisés</span>
+                <span className="stat-label">{t.footer.stats.projects}</span>
               </div>
               <div className="stat-item">
                 <span className="stat-number">3+</span>
-                <span className="stat-label">Années d'expérience</span>
+                <span className="stat-label">{t.footer.stats.experience}</span>
               </div>
               <div className="stat-item">
                 <span className="stat-number">24h</span>
-                <span className="stat-label">Temps de réponse</span>
+                <span className="stat-label">{t.footer.stats.responseTime}</span>
               </div>
             </div>
 
-            <button className="back-to-top" onClick={scrollToTop} aria-label="Retour en haut">
+            <button className="back-to-top" onClick={scrollToTop} aria-label={t.footer.bottom.backToTop}>
               <span>⬆️</span>
-              <span>Haut de page</span>
+              <span>{t.footer.bottom.backToTop}</span>
             </button>
           </div>
         </div>

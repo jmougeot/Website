@@ -1,32 +1,31 @@
 import React from 'react';
+import { useLanguage } from '../../LanguageContext';
 import './About.css';
 
 const About: React.FC = () => {
+  const { t } = useLanguage();
   return (
     <section id="about" className="about">
       <div className="container">
         <div className="about-content">
           <div className="about-text">
-            <h2 className="section-title">À propos de moi</h2>
+            <h2 className="section-title">{t.about.title}</h2>
             <p className="about-description">
-              Passionné par le développement web et le design, je combine créativité 
-              et expertise technique pour créer des solutions numériques innovantes. 
-              Avec plusieurs années d'expérience, je me spécialise dans le développement 
-              d'applications web modernes et performantes.
+              {t.about.description}
             </p>
             
             <div className="about-stats">
               <div className="stat-item">
                 <span className="stat-number">3+</span>
-                <span className="stat-label">Années d'expérience</span>
+                <span className="stat-label">{t.about.stats.experience}</span>
               </div>
               <div className="stat-item">
                 <span className="stat-number">50+</span>
-                <span className="stat-label">Projets réalisés</span>
+                <span className="stat-label">{t.about.stats.projects}</span>
               </div>
               <div className="stat-item">
                 <span className="stat-number">100%</span>
-                <span className="stat-label">Satisfaction client</span>
+                <span className="stat-label">{t.about.stats.clients}</span>
               </div>
             </div>
 
@@ -34,21 +33,21 @@ const About: React.FC = () => {
               <div className="quality-item">
                 <div className="quality-icon">🎨</div>
                 <div className="quality-text">
-                  <h4>Design Créatif</h4>
+                  <h4>{t.about.qualities.creative}</h4>
                   <p>Interface utilisateur moderne et intuitive</p>
                 </div>
               </div>
               <div className="quality-item">
                 <div className="quality-icon">⚡</div>
                 <div className="quality-text">
-                  <h4>Performance</h4>
+                  <h4>{t.about.qualities.reliable}</h4>
                   <p>Code optimisé pour une expérience fluide</p>
                 </div>
               </div>
               <div className="quality-item">
                 <div className="quality-icon">📱</div>
                 <div className="quality-text">
-                  <h4>Responsive</h4>
+                  <h4>{t.about.qualities.passionate}</h4>
                   <p>Adaptation parfaite sur tous les appareils</p>
                 </div>
               </div>

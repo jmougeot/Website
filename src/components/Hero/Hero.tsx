@@ -1,7 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../../LanguageContext';
 import './Hero.css';
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -21,19 +23,18 @@ const Hero: React.FC = () => {
       <div className="hero-content">
         <div className="hero-text fade-in-up">
           <h1>
-            Salut, je suis <span className="highlight">Jacques Mougeot</span>
+            {t.hero.greeting} <span className="highlight">{t.hero.name}</span>
           </h1>
-          <h2>Développeur Web & Designer</h2>
+          <h2>{t.hero.title}</h2>
           <p>
-            Je crée des expériences numériques exceptionnelles avec une attention 
-            particulière au design et à la performance.
+            {t.hero.description}
           </p>
           <div className="hero-buttons">
             <button className="btn-primary" onClick={scrollToContact}>
-              Me contacter
+              {t.hero.contactButton}
             </button>
             <button className="btn-secondary" onClick={scrollToProjects}>
-              Voir mes projets
+              {t.hero.projectsButton}
             </button>
           </div>
         </div>
@@ -47,13 +48,13 @@ const Hero: React.FC = () => {
                   <span className="keyword">const</span> <span className="variable">developer</span> = {'{'}
                 </div>
                 <div className="code-line indent">
-                  <span className="property">name</span>: <span className="string">'Jacques'</span>,
+                  <span className="property">name</span>: <span className="string">'{t.hero.codeSnippet.name}'</span>,
                 </div>
                 <div className="code-line indent">
-                  <span className="property">skills</span>: [<span className="string">'React'</span>, <span className="string">'TypeScript'</span>],
+                  <span className="property">skills</span>: [<span className="string">'{t.hero.codeSnippet.skills}'</span>],
                 </div>
                 <div className="code-line indent">
-                  <span className="property">passion</span>: <span className="string">'Design'</span>
+                  <span className="property">passion</span>: <span className="string">'{t.hero.codeSnippet.passion}'</span>
                 </div>
                 <div className="code-line">{'}'}</div>
               </div>

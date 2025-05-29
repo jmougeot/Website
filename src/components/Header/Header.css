@@ -24,6 +24,12 @@
   align-items: center;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .logo span {
   font-size: 1.5rem;
   font-weight: 700;
@@ -121,6 +127,7 @@
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+    padding-top: 1rem;
   }
 
   .nav a {
@@ -130,5 +137,15 @@
 
   .nav a:last-child {
     border-bottom: none;
+  }
+
+  /* Mobile specific styles for header actions */
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  .nav.nav-open .language-toggle {
+    margin-top: 1rem;
+    align-self: center;
   }
 }
