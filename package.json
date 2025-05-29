@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage" : "https://yourusername.github.io/react-gh-pages",
+  "homepage": "https://jmougeot.github.io/Website",
   "private": true,
   "dependencies": {
     "cra-template-pwa-typescript": "2.0.0",
