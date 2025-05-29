@@ -87,6 +87,11 @@ export interface Translations {
           description: string;
           features: string[];
         };
+        photogrammetry: {
+          title: string;
+          description: string;
+          features: string[];
+        };
       };
     labels: {
       keyFeatures: string;
@@ -283,6 +288,11 @@ export const translations: Record<'fr' | 'en', Translations> = {
           title: "Portfolio Web Progressif (PWA)",
           description: "Site web personnel moderne développé avec React et TypeScript, transformé en Progressive Web App. Interface responsive avec animations fluides, optimisée pour les performances et l'accessibilité.",
           features: ["Design responsive", "Animations CSS avancées", "PWA Ready", "TypeScript", "Performance optimisée"]
+        },
+        photogrammetry: {
+          title: "Reconstruction 3D par Photogrammétrie",
+          description: "Programme de nuage de points réalisant la reconstruction 3D d'une scène à partir d'une vidéo. Utilise OpenCV pour la vision par ordinateur, détection de points clés, triangulation et RANSAC pour une reconstruction robuste.",
+          features: ["Vision par ordinateur", "Détection de points clés", "Triangulation 3D", "Algorithme RANSAC", "Support LIDAR", "Analyse de marché BIM"]
         }
       },
       labels: {
@@ -474,6 +484,11 @@ export const translations: Record<'fr' | 'en', Translations> = {
           title: "Progressive Web Portfolio (PWA)",
           description: "Modern personal website developed with React and TypeScript, transformed into a Progressive Web App. Responsive interface with smooth animations, optimized for performance and accessibility.",
           features: ["Responsive design", "Advanced CSS animations", "PWA Ready", "TypeScript", "Performance optimized"]
+        },
+        photogrammetry: {
+          title: "3D Reconstruction by Photogrammetry",
+          description: "Point cloud program performing 3D reconstruction of a scene from video. Uses OpenCV for computer vision, keypoint detection, triangulation and RANSAC for robust reconstruction.",
+          features: ["Computer vision", "Keypoint detection", "3D triangulation", "RANSAC algorithm", "LIDAR support", "BIM market analysis"]
         }
       },
       labels: {

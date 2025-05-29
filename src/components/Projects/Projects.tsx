@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
       technologies: ["React Native", "TypeScript", "Firebase", "Node.js"],
       features: t.projectData.cashRegister.features,
       status: "Terminé",
-      link: "#"
+      link: "https://github.com/jmougeot/Projet_innovation"
     },
     {
       id: 2,
@@ -26,6 +26,16 @@ const Projects: React.FC = () => {
       features: t.projectData.portfolioPWA.features,
       status: "Terminé",
       link: "https://jacquesmougeot.fr"
+    },
+    {
+      id: 3,
+      title: t.projectData.photogrammetry.title,
+      description: t.projectData.photogrammetry.description,
+      image: "📐",
+      technologies: ["Python", "OpenCV", "NumPy", "Matplotlib", "RANSAC"],
+      features: t.projectData.photogrammetry.features,
+      status: "Terminé",
+      link: "https://github.com/jmougeot/MAP"
     }
   ];
 
