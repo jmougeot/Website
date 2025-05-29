@@ -371,7 +371,7 @@ export const translations: Record<'fr' | 'en', Translations> = {
       },
       contactInfo: {
         title: "Contact",
-        email: "📧 jacques.mougeot@email.com",
+        email: "📧 jacques.mougeot@centrale-med.fr",
         phone: "📱 +33 6 12 34 56 78",
         location: "📍 France",
         website: "🌐 jacquesmougeot.fr"
@@ -567,7 +567,7 @@ export const translations: Record<'fr' | 'en', Translations> = {
       },
       contactInfo: {
         title: "Contact",
-        email: "📧 jacques.mougeot@email.com",
+        email: "📧 jacques.mougeot@centrale-med.fr",
         phone: "📱 +33 6 12 34 56 78",
         location: "📍 France",
         website: "🌐 jacquesmougeot.fr"

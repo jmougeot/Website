@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
               <div className="info-icon">📧</div>
               <div className="info-text">
                 <h4>Email</h4>
-                <p>jacques.mougeot@email.com</p>
+                <p>jacques.mougeot@centrale-med.fr</p>
               </div>
             </div>
 
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
             <div className="social-links">
               <h4>Retrouvez-moi sur :</h4>
               <div className="social-icons">
-                <a href="https://linkedin.com/in/jacques-mougeot" className="social-link linkedin" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/jacquesmougeot/" className="social-link linkedin" target="_blank" rel="noopener noreferrer">
                   <span>💼</span>
                   LinkedIn
                 </a>

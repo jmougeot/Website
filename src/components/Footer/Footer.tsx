@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
               <div className="footer-section">
                 <h4>Contact</h4>
                 <ul>
-                  <li>📧 jacques.mougeot@email.com</li>
+                  <li>📧 jacques.mougeot@centrale-med.fr</li>
                   <li>📱 +33 6 12 34 56 78</li>
                   <li>📍 France</li>
                   <li>🌐 jacquesmougeot.fr</li>
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
           <div className="footer-social">
             <h4>Suivez-moi</h4>
             <div className="social-icons">
-              <a href="https://linkedin.com/in/jacques-mougeot" className="social-icon linkedin" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/jacquesmougeot/" className="social-icon linkedin" aria-label="LinkedIn">
                 <span>💼</span>
               </a>
               <a href="https://github.com/jacques-mougeot" className="social-icon github" aria-label="GitHub">
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
               <a href="https://twitter.com/jacques_mougeot" className="social-icon twitter" aria-label="Twitter">
                 <span>🐦</span>
               </a>
-              <a href="mailto:jacques.mougeot@email.com" className="social-icon email" aria-label="Email">
+              <a href="mailto:jacques.mougeot@centrale-med.fr" className="social-icon email" aria-label="Email">
                 <span>📧</span>
               </a>
             </div>

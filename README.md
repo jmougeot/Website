@@ -115,9 +115,9 @@ Le site est régulièrement mis à jour avec :
 
 ## 📧 Contact
 
-- **Email** : jacques.mougeot@email.com
-- **LinkedIn** : [linkedin.com/in/jacques-mougeot](https://linkedin.com/in/jacques-mougeot)
-- **GitHub** : [github.com/jacques-mougeot](https://github.com/jacques-mougeot)
+- **Email** : jacques.mougeot@centrale-med.fr
+- **LinkedIn** : [linkedin.com/in/jacquesmougeot](https://www.linkedin.com/in/jacquesmougeot/)
+- **GitHub** : [github.com/jmougeot](https://github.com/jmougeot)
 
 ---
 
