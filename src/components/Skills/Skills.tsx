@@ -6,6 +6,17 @@ const Skills: React.FC = () => {
   const { t } = useLanguage();
   const skillsData = [
     {
+      category: "Data Science & AI",
+      skills: [
+        { name: "Python", level: 90, icon: "🐍" },
+        { name: "PyTorch", level: 85, icon: "🔥" },
+        { name: "TensorFlow", level: 80, icon: "🧠" },
+        { name: "Pandas", level: 88, icon: "🐼" },
+        { name: "NumPy", level: 85, icon: "🔢" },
+        { name: "Matplotlib", level: 80, icon: "📊" }
+      ]
+    },
+    {
       category: t.skills.categories.frontend,
       skills: [
         { name: "React", level: 90, icon: "⚛️" },
@@ -19,10 +30,10 @@ const Skills: React.FC = () => {
     {
       category: t.skills.categories.backend,
       skills: [
+        { name: "Django", level: 82, icon: "🌿" },
         { name: "Node.js", level: 80, icon: "🟢" },
-        { name: "Python", level: 75, icon: "🐍" },
-        { name: "Express", level: 78, icon: "🚀" },
-        { name: "MongoDB", level: 70, icon: "🍃" },
+        { name: "SQL", level: 85, icon: "💾" },
+        { name: "SQLite", level: 88, icon: "🗃️" },
         { name: "PostgreSQL", level: 72, icon: "🐘" },
         { name: "REST API", level: 85, icon: "🔗" }
       ]
@@ -31,11 +42,11 @@ const Skills: React.FC = () => {
       category: t.skills.categories.tools,
       skills: [
         { name: "Git", level: 88, icon: "🔄" },
+        { name: "OpenCV", level: 80, icon: "👁️" },
         { name: "VS Code", level: 95, icon: "💙" },
-        { name: "Figma", level: 80, icon: "🎯" },
+        { name: "Jupyter", level: 85, icon: "📓" },
         { name: "Docker", level: 65, icon: "🐳" },
-        { name: "AWS", level: 60, icon: "☁️" },
-        { name: "Webpack", level: 70, icon: "📦" }
+        { name: "Linux", level: 75, icon: "🐧" }
       ]
     }
   ];
@@ -77,25 +88,16 @@ const Skills: React.FC = () => {
 
         <div className="skills-summary">
           <div className="summary-card">
-            <h4>🎯 Mon Approche</h4>
-            <p>
-              Je privilégie la qualité du code, l'expérience utilisateur et les 
-              bonnes pratiques de développement pour créer des solutions durables.
-            </p>
+            <h4>{t.skills.summary.approach.title}</h4>
+            <p>{t.skills.summary.approach.description}</p>
           </div>
           <div className="summary-card">
-            <h4>📚 Apprentissage Continu</h4>
-            <p>
-              Toujours en veille technologique pour rester à jour avec les dernières 
-              tendances et améliorer constamment mes compétences.
-            </p>
+            <h4>{t.skills.summary.learning.title}</h4>
+            <p>{t.skills.summary.learning.description}</p>
           </div>
           <div className="summary-card">
-            <h4>🤝 Collaboration</h4>
-            <p>
-              Expérience en travail d'équipe agile, communication efficace et 
-              partage de connaissances avec les autres développeurs.
-            </p>
+            <h4>{t.skills.summary.collaboration.title}</h4>
+            <p>{t.skills.summary.collaboration.description}</p>
           </div>
         </div>
       </div>

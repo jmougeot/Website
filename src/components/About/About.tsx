@@ -21,35 +21,39 @@ const About: React.FC = () => {
                 <span className="stat-label">{t.about.stats.experience}</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">50+</span>
+                <span className="stat-number">20+</span>
                 <span className="stat-label">{t.about.stats.projects}</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">100%</span>
+                <span className="stat-number">10+</span>
                 <span className="stat-label">{t.about.stats.clients}</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">2x</span>
+                <span className="stat-label">{t.about.stats.awards}</span>
               </div>
             </div>
 
             <div className="about-qualities">
               <div className="quality-item">
-                <div className="quality-icon">🎨</div>
+                <div className="quality-icon">🧠</div>
                 <div className="quality-text">
                   <h4>{t.about.qualities.creative}</h4>
-                  <p>Interface utilisateur moderne et intuitive</p>
+                  <p>Approche méthodique pour résoudre les problèmes complexes</p>
                 </div>
               </div>
               <div className="quality-item">
-                <div className="quality-icon">⚡</div>
+                <div className="quality-icon">👥</div>
                 <div className="quality-text">
                   <h4>{t.about.qualities.reliable}</h4>
-                  <p>Code optimisé pour une expérience fluide</p>
+                  <p>Coordination d'équipes et gestion de projets techniques</p>
                 </div>
               </div>
               <div className="quality-item">
-                <div className="quality-icon">📱</div>
+                <div className="quality-icon">💡</div>
                 <div className="quality-text">
                   <h4>{t.about.qualities.passionate}</h4>
-                  <p>Adaptation parfaite sur tous les appareils</p>
+                  <p>Solutions créatives avec les dernières technologies</p>
                 </div>
               </div>
             </div>
@@ -61,10 +65,10 @@ const About: React.FC = () => {
                 <div className="avatar">JM</div>
               </div>
               <div className="floating-elements">
-                <div className="floating-item item-1">React</div>
-                <div className="floating-item item-2">TypeScript</div>
-                <div className="floating-item item-3">CSS</div>
-                <div className="floating-item item-4">Design</div>
+                <div className="floating-item item-1">Python</div>
+                <div className="floating-item item-2">PyTorch</div>
+                <div className="floating-item item-3">Django</div>
+                <div className="floating-item item-4">Data Science</div>
               </div>
             </div>
           </div>

@@ -35,6 +35,16 @@ const Projects: React.FC = () => {
       features: t.projects.projectData.photogrammetry.features,
       status: "Terminé",
       link: "https://github.com/jmougeot/MAP"
+    },
+    {
+      id: 4,
+      title: t.projects.projectData.sportsRental.title,
+      description: t.projects.projectData.sportsRental.description,
+      image: "🏃‍♂️",
+      technologies: ["Django", "Python", "SQLite", "Pillow", "HTML/CSS", "JavaScript"],
+      features: t.projects.projectData.sportsRental.features,
+      status: "Terminé",
+      link: "https://github.com/jmougeot/App-location"
     }
   ];
 

@@ -92,6 +92,11 @@ export interface Translations {
           description: string;
           features: string[];
         };
+        sportsRental: {
+          title: string;
+          description: string;
+          features: string[];
+        };
       };
     labels: {
       keyFeatures: string;
@@ -231,17 +236,17 @@ export const translations: Record<'fr' | 'en', Translations> = {
     },
     about: {
       title: "À propos de moi",
-      description: "Passionné par le développement web et le design, je combine créativité et expertise technique pour créer des solutions numériques innovantes. Mon approche se concentre sur l'expérience utilisateur et la performance.",
+      description: "Étudiant ingénieur à Centrale Marseille (promotion 2026) avec une spécialisation en data science, intelligence artificielle et informatique. Classé dans le top 1% en mathématiques. Expérimenté en Python, machine learning (PyTorch, TensorFlow), visualisation de données (Pandas, Matplotlib) et SQL. J'ai contribué au développement du système de bibliothèque standard d'Agda lors d'un stage à l'Université McMaster.",
       stats: {
-        experience: "Années d'expérience",
-        projects: "Projets réalisés",
-        clients: "Clients satisfaits",
-        awards: "Récompenses"
+        experience: "Années d'études",
+        projects: "Projets réalisés", 
+        clients: "Contributions open source",
+        awards: "Compétitions escalade"
       },
       qualities: {
-        creative: "Créatif",
-        reliable: "Fiable",
-        passionate: "Passionné"
+        creative: "Analytique",
+        reliable: "Leadership",
+        passionate: "Innovation"
       }
     },
     skills: {
@@ -293,6 +298,11 @@ export const translations: Record<'fr' | 'en', Translations> = {
           title: "Reconstruction 3D par Photogrammétrie",
           description: "Programme de nuage de points réalisant la reconstruction 3D d'une scène à partir d'une vidéo. Utilise OpenCV pour la vision par ordinateur, détection de points clés, triangulation et RANSAC pour une reconstruction robuste.",
           features: ["Vision par ordinateur", "Détection de points clés", "Triangulation 3D", "Algorithme RANSAC", "Support LIDAR", "Analyse de marché BIM"]
+        },
+        sportsRental: {
+          title: "App-location : Plateforme de Location d'Équipements Sportifs",
+          description: "Application web full-stack développée avec Django pour la location d'équipements sportifs. Utilise SQLite pour la base de données et intègre la gestion d'images avec la bibliothèque Pillow.",
+          features: ["Interface responsive", "Gestion d'inventaire", "Système de réservation", "Traitement d'images", "Base de données SQLite", "Collaboration front-end"]
         }
       },
       labels: {
@@ -427,17 +437,17 @@ export const translations: Record<'fr' | 'en', Translations> = {
     },
     about: {
       title: "About me",
-      description: "Passionate about web development and design, I combine creativity and technical expertise to create innovative digital solutions. My approach focuses on user experience and performance.",
+      description: "Engineering student at Centrale Marseille (Class of 2026) with a strong focus on data science, artificial intelligence, and computer science. Ranked in the top 1% in mathematics. Experienced in Python, machine learning (PyTorch, TensorFlow), data visualization (Pandas, Matplotlib), and SQL. Contributed to the development of Agda's standard library package system during an internship at McMaster University.",
       stats: {
-        experience: "Years of experience",
+        experience: "Years of study",
         projects: "Completed projects",
-        clients: "Happy clients",
-        awards: "Awards"
+        clients: "Open source contributions",
+        awards: "Climbing competitions"
       },
       qualities: {
-        creative: "Creative",
-        reliable: "Reliable",
-        passionate: "Passionate"
+        creative: "Analytical",
+        reliable: "Leadership",
+        passionate: "Innovation"
       }
     },
     skills: {
@@ -489,6 +499,11 @@ export const translations: Record<'fr' | 'en', Translations> = {
           title: "3D Reconstruction by Photogrammetry",
           description: "Point cloud program performing 3D reconstruction of a scene from video. Uses OpenCV for computer vision, keypoint detection, triangulation and RANSAC for robust reconstruction.",
           features: ["Computer vision", "Keypoint detection", "3D triangulation", "RANSAC algorithm", "LIDAR support", "BIM market analysis"]
+        },
+        sportsRental: {
+          title: "App-location: Sports Equipment Rental Platform",
+          description: "Full-stack web application developed with Django for sports equipment rental. Uses SQLite database and integrates image management with Pillow library.",
+          features: ["Responsive interface", "Inventory management", "Booking system", "Image processing", "SQLite database", "Front-end collaboration"]
         }
       },
       labels: {

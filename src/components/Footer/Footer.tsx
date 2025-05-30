@@ -73,9 +73,6 @@ const Footer: React.FC = () => {
               <a href="https://github.com/jacques-mougeot" className="social-icon github" aria-label="GitHub">
                 <span>🐱</span>
               </a>
-              <a href="https://twitter.com/jacques_mougeot" className="social-icon twitter" aria-label="Twitter">
-                <span>🐦</span>
-              </a>
               <a href="mailto:jacques.mougeot@centrale-med.fr" className="social-icon email" aria-label="Email">
                 <span>📧</span>
               </a>
@@ -86,7 +83,7 @@ const Footer: React.FC = () => {
             <h4>🚀 Prêt à collaborer ?</h4>
             <p>Transformons vos idées en réalité numérique</p>
             <a href="#contact" className="cta-button">
-              Démarrer un projet
+              Démarrer un projet 
               <span>✨</span>
             </a>
           </div>
