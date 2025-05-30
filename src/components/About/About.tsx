@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLanguage } from '../../App';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './About.css';
 
 const About: React.FC = () => {
@@ -16,18 +16,7 @@ const About: React.FC = () => {
             </p>
             
             <div className="about-stats">
-              <div className="stat-item">
-                <span className="stat-number">3+</span>
-                <span className="stat-label">{t.about.stats.experience}</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-number">20+</span>
-                <span className="stat-label">{t.about.stats.projects}</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-number">10+</span>
-                <span className="stat-label">{t.about.stats.clients}</span>
-              </div>
+
               <div className="stat-item">
                 <span className="stat-number">2x</span>
                 <span className="stat-label">{t.about.stats.awards}</span>
@@ -36,24 +25,24 @@ const About: React.FC = () => {
 
             <div className="about-qualities">
               <div className="quality-item">
-                <div className="quality-icon">🧠</div>
+                <div className="quality-icon">🏛️</div>
                 <div className="quality-text">
                   <h4>{t.about.qualities.creative}</h4>
-                  <p>Approche méthodique pour résoudre les problèmes complexes</p>
+                  <p>{t.about.qualities.creativeDescription}</p>
                 </div>
               </div>
               <div className="quality-item">
-                <div className="quality-icon">👥</div>
+                <div className="quality-icon">🎓</div>
                 <div className="quality-text">
                   <h4>{t.about.qualities.reliable}</h4>
-                  <p>Coordination d'équipes et gestion de projets techniques</p>
+                  <p>{t.about.qualities.reliableDescription}</p>
                 </div>
               </div>
               <div className="quality-item">
-                <div className="quality-icon">💡</div>
+                <div className="quality-icon">👷</div>
                 <div className="quality-text">
                   <h4>{t.about.qualities.passionate}</h4>
-                  <p>Solutions créatives avec les dernières technologies</p>
+                  <p>{t.about.qualities.passionateDescription}</p>
                 </div>
               </div>
             </div>

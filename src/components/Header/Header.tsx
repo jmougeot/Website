@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../../App';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './Header.css';
 
 const Header: React.FC = () => {

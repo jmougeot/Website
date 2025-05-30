@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLanguage } from '../../App';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './Footer.css';
 
 const Footer: React.FC = () => {

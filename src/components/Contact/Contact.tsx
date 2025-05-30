@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLanguage } from '../../App';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './Contact.css';
 
 const Contact: React.FC = () => {

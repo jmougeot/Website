@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLanguage } from '../../App';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './Projects.css';
 
 const Projects: React.FC = () => {

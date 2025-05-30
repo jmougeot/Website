@@ -126,7 +126,7 @@ if git remote get-url origin &> /dev/null; then
         print_status "Déploiement sur GitHub Pages..."
         npm run deploy
         if [ $? -eq 0 ]; then
-            print_success " Déploiement réussi!"
+            print_success "Déploiement réussi!"
             print_status "Votre site sera disponible dans quelques minutes sur:"
             print_status "• https://votre-username.github.io/Website"
             print_status "• https://jacquesmougeot.fr (si le DNS est configuré)"

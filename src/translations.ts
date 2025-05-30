@@ -27,16 +27,16 @@ export interface Translations {
   about: {
     title: string;
     description: string;
-    stats: {
-      experience: string;
-      projects: string;
-      clients: string;
+        stats: {
       awards: string;
     };
     qualities: {
       creative: string;
+      creativeDescription?: string;
       reliable: string;
+      reliableDescription?: string;
       passionate: string;
+      passionateDescription?: string;
     };
   };
   
@@ -236,17 +236,17 @@ export const translations: Record<'fr' | 'en', Translations> = {
     },
     about: {
       title: "À propos de moi",
-      description: "Étudiant ingénieur à Centrale Marseille (promotion 2026) avec une spécialisation en data science, intelligence artificielle et informatique. Classé dans le top 1% en mathématiques. Expérimenté en Python, machine learning (PyTorch, TensorFlow), visualisation de données (Pandas, Matplotlib) et SQL. J'ai contribué au développement du système de bibliothèque standard d'Agda lors d'un stage à l'Université McMaster.",
+      description: "Étudiant ingénieur à Centrale Marseille (promotion 2026), actuellement en stage à l'Université McMaster où je contribue au développement du système de bibliothèque standard d'Agda. Spécialisé en data science, intelligence artificielle et informatique. Je travaille actuellement sur un projet de caisse enregistreuse pour restaurant utilisant React Native et Firebase.",
       stats: {
-        experience: "Années d'études",
-        projects: "Projets réalisés", 
-        clients: "Contributions open source",
-        awards: "Compétitions escalade"
+        awards: "Compétitions escalade",
       },
       qualities: {
         creative: "Analytique",
-        reliable: "Leadership",
-        passionate: "Innovation"
+        creativeDescription: "Stage à l'Université McMaster",
+        reliable: "Éducation",
+        reliableDescription: "École Centrale Marseille",
+        passionate: "Mon projet actuel",
+        passionateDescription : "Caisse Enregistreuse Restaurant",
       }
     },
     skills: {
@@ -439,15 +439,15 @@ export const translations: Record<'fr' | 'en', Translations> = {
       title: "About me",
       description: "Engineering student at Centrale Marseille (Class of 2026) with a strong focus on data science, artificial intelligence, and computer science. Ranked in the top 1% in mathematics. Experienced in Python, machine learning (PyTorch, TensorFlow), data visualization (Pandas, Matplotlib), and SQL. Contributed to the development of Agda's standard library package system during an internship at McMaster University.",
       stats: {
-        experience: "Years of study",
-        projects: "Completed projects",
-        clients: "Open source contributions",
         awards: "Climbing competitions"
       },
       qualities: {
         creative: "Analytical",
-        reliable: "Leadership",
-        passionate: "Innovation"
+        creativeDescription: "Internship at McMaster University",
+        reliable: "Education",
+        reliableDescription: "Master of computer engineering at Centrale Marseille",
+        passionate: "My current project",
+        passionateDescription: "Restaurant Cash Register"
       }
     },
     skills: {
