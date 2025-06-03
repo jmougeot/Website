@@ -38,17 +38,6 @@ const Skills: React.FC = () => {
         { name: "REST API", level: 85, icon: "🔗" }
       ]
     },
-    {
-      category: t.skills.categories.tools,
-      skills: [
-        { name: "Git", level: 88, icon: "🔄" },
-        { name: "OpenCV", level: 80, icon: "👁️" },
-        { name: "VS Code", level: 95, icon: "💙" },
-        { name: "Jupyter", level: 85, icon: "📓" },
-        { name: "Docker", level: 65, icon: "🐳" },
-        { name: "Linux", level: 75, icon: "🐧" }
-      ]
-    }
   ];
 
   return (

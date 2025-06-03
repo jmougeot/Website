@@ -9,6 +9,10 @@
   padding: 6rem 2rem 2rem;
 }
 
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -32,7 +36,7 @@
 .hero-text h1 {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #1f2937;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -46,14 +50,14 @@
 
 .hero-text h2 {
   font-size: 1.5rem;
-  color: #6b7280;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
   font-weight: 400;
 }
 
 .hero-text p {
   font-size: 1.125rem;
-  color: #6b7280;
+  color: var(--text-secondary);
   margin-bottom: 2.5rem;
   line-height: 1.7;
 }
@@ -170,7 +174,7 @@
 }
 
 .scroll-indicator {
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   display: flex;
   flex-direction: column;

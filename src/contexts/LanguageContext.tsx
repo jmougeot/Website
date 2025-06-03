@@ -1,11 +1,15 @@
-import React, { useState, createContext, useContext, ReactNode } from 'react';
+import React, { useState, createContext, useContext, ReactNode, useEffect } from 'react';
 import { translations } from '../translations';
 
 type Language = 'fr' | 'en';
+type Theme = 'light' | 'dark';
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+  toggleTheme: () => void;
   t: typeof translations.fr;
 }
 
@@ -25,10 +29,26 @@ interface LanguageProviderProps {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('fr');
+  const [theme, setTheme] = useState<Theme>(() => {
+    // Check for saved theme preference or default to 'dark'
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    return savedTheme || 'dark';
+  });
+  
   const t = translations[language];
 
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  };
+
+  // Apply theme to document root
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, theme, setTheme, toggleTheme, t }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -5,7 +5,7 @@ import './Header.css';
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage, theme, toggleTheme, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +39,14 @@ const Header: React.FC = () => {
         </nav>
 
         <div className="header-actions">
+          <button 
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle dark mode"
+          >
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+          
           <div className="language-switcher">
             <button 
               className={`lang-btn ${language === 'fr' ? 'active' : ''}`}
