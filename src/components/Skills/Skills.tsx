@@ -4,16 +4,16 @@ import './Skills.css';
 
 const Skills: React.FC = () => {
   const { t } = useLanguage();
+  
   const skillsData = [
     {
-      category: "Data Science & AI",
+      category: t.skills.categories.dataScience,
       skills: [
         { name: "Python", level: 90, icon: "🐍" },
         { name: "PyTorch", level: 85, icon: "🔥" },
         { name: "TensorFlow", level: 80, icon: "🧠" },
         { name: "Pandas", level: 88, icon: "🐼" },
-        { name: "NumPy", level: 85, icon: "🔢" },
-        { name: "Matplotlib", level: 80, icon: "📊" }
+        { name: "NumPy", level: 85, icon: "🔢" }
       ]
     },
     {
@@ -21,10 +21,8 @@ const Skills: React.FC = () => {
       skills: [
         { name: "React", level: 90, icon: "⚛️" },
         { name: "TypeScript", level: 85, icon: "📘" },
-        { name: "HTML/CSS", level: 95, icon: "🎨" },
         { name: "JavaScript", level: 88, icon: "🟨" },
-        { name: "Next.js", level: 80, icon: "⚫" },
-        { name: "Tailwind", level: 85, icon: "💨" }
+        { name: "HTML/CSS", level: 95, icon: "🎨" }
       ]
     },
     {
@@ -33,20 +31,16 @@ const Skills: React.FC = () => {
         { name: "Django", level: 82, icon: "🌿" },
         { name: "Node.js", level: 80, icon: "🟢" },
         { name: "SQL", level: 85, icon: "💾" },
-        { name: "SQLite", level: 88, icon: "🗃️" },
-        { name: "PostgreSQL", level: 72, icon: "🐘" },
-        { name: "REST API", level: 85, icon: "🔗" }
+        { name: "PostgreSQL", level: 72, icon: "🐘" }
       ]
-    },
+    }
   ];
 
   return (
     <section id="skills" className="skills">
       <div className="container">
         <h2 className="section-title">{t.skills.title}</h2>
-        <p className="section-subtitle">
-          {t.skills.subtitle}
-        </p>
+        <p className="section-subtitle">{t.skills.subtitle}</p>
 
         <div className="skills-grid">
           {skillsData.map((category, categoryIndex) => (
@@ -60,34 +54,19 @@ const Skills: React.FC = () => {
                         <span className="skill-icon">{skill.icon}</span>
                         <span className="skill-name">{skill.name}</span>
                       </div>
-                      <span className="skill-percentage">{skill.level}%</span>
+                      <span className="skill-level">{skill.level}%</span>
                     </div>
                     <div className="skill-bar">
                       <div 
                         className="skill-progress" 
                         style={{ width: `${skill.level}%` }}
-                      ></div>
+                      />
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="skills-summary">
-          <div className="summary-card">
-            <h4>{t.skills.summary.approach.title}</h4>
-            <p>{t.skills.summary.approach.description}</p>
-          </div>
-          <div className="summary-card">
-            <h4>{t.skills.summary.learning.title}</h4>
-            <p>{t.skills.summary.learning.description}</p>
-          </div>
-          <div className="summary-card">
-            <h4>{t.skills.summary.collaboration.title}</h4>
-            <p>{t.skills.summary.collaboration.description}</p>
-          </div>
         </div>
       </div>
     </section>

@@ -45,26 +45,9 @@ export interface Translations {
     title: string;
     subtitle: string;
     categories: {
+      dataScience: string;
       frontend: string;
       backend: string;
-      tools: string;
-    };
-    summary: {
-      approach: {
-        title: string;
-        description: string;
-      };
-      learning: {
-        title: string;
-        description: string;
-      };
-      collaboration: {
-        title: string;
-        description: string;
-      };
-      languages: string;
-      frameworks: string;
-      databases: string;
     };
   };
   
@@ -251,28 +234,11 @@ export const translations: Record<'fr' | 'en', Translations> = {
     },
     skills: {
       title: "Mes compétences",
-      subtitle: "Technologies et outils que je maîtrise pour créer des solutions complètes",
+      subtitle: "Technologies que je maîtrise",
       categories: {
+        dataScience: "Data Science & IA",
         frontend: "Frontend",
-        backend: "Backend",
-        tools: "Outils"
-      },
-      summary: {
-        approach: {
-          title: "🎯 Mon Approche",
-          description: "Je privilégie la qualité du code, l'expérience utilisateur et les bonnes pratiques de développement pour créer des solutions durables."
-        },
-        learning: {
-          title: "📚 Apprentissage Continu",
-          description: "Toujours en veille technologique pour rester à jour avec les dernières tendances et améliorer constamment mes compétences."
-        },
-        collaboration: {
-          title: "🤝 Collaboration",
-          description: "Expérience en travail d'équipe agile, communication efficace et partage de connaissances avec les autres développeurs."
-        },
-        languages: "Langages",
-        frameworks: "Frameworks",
-        databases: "Bases de données"
+        backend: "Backend"
       }
     },
     projects: {
@@ -452,28 +418,11 @@ export const translations: Record<'fr' | 'en', Translations> = {
     },
     skills: {
       title: "My skills",
-      subtitle: "Technologies and tools I master to create complete solutions",
+      subtitle: "Technologies I master",
       categories: {
+        dataScience: "Data Science & AI", 
         frontend: "Frontend",
-        backend: "Backend",
-        tools: "Tools"
-      },
-      summary: {
-        approach: {
-          title: "🎯 My Approach",
-          description: "I prioritize code quality, user experience, and development best practices to create sustainable solutions."
-        },
-        learning: {
-          title: "📚 Continuous Learning",
-          description: "Always staying up-to-date with the latest trends and constantly improving my skills through technology watch."
-        },
-        collaboration: {
-          title: "🤝 Collaboration",
-          description: "Experience in agile teamwork, effective communication and knowledge sharing with other developers."
-        },
-        languages: "Languages",
-        frameworks: "Frameworks",
-        databases: "Databases"
+        backend: "Backend"
       }
     },
     projects: {
