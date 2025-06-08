@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
       technologies: ["React Native", "TypeScript", "Firebase", "Node.js"],
       features: t.projects.projectData.cashRegister.features,
       status: "Terminé",
-      link: "https://github.com/jmougeot/Projet_innovation"
+      link: "https://app-restaurant-a6370.web.app"
     },
     {
       id: 2,
