@@ -1,68 +1,59 @@
 import React from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
-import './Skills.css';
 
 const Skills: React.FC = () => {
   const { t } = useLanguage();
-  
-  const skillsData = [
-    {
-      category: t.skills.categories.dataScience,
-      skills: [
-        { name: "Python", level: 90, icon: "🐍" },
-        { name: "PyTorch", level: 85, icon: "🔥" },
-        { name: "TensorFlow", level: 80, icon: "🧠" },
-        { name: "Pandas", level: 88, icon: "🐼" },
-        { name: "NumPy", level: 85, icon: "🔢" }
-      ]
-    },
-    {
-      category: t.skills.categories.frontend,
-      skills: [
-        { name: "React", level: 90, icon: "⚛️" },
-        { name: "TypeScript", level: 85, icon: "📘" },
-        { name: "JavaScript", level: 88, icon: "🟨" },
-        { name: "HTML/CSS", level: 95, icon: "🎨" }
-      ]
-    },
-    {
-      category: t.skills.categories.backend,
-      skills: [
-        { name: "Django", level: 82, icon: "🌿" },
-        { name: "Node.js", level: 80, icon: "🟢" },
-        { name: "SQL", level: 85, icon: "💾" },
-        { name: "PostgreSQL", level: 72, icon: "🐘" }
-      ]
-    }
-  ];
-
   return (
-    <section id="skills" className="skills">
-      <div className="container">
-        <h2 className="section-title">{t.skills.title}</h2>
-        <p className="section-subtitle">{t.skills.subtitle}</p>
+    <section id="skills" style={{ padding: '128px 0', borderTop: '1px solid var(--border)', backgroundColor: 'var(--bg-subtle)' }}>
+      <div style={{ maxWidth: '1024px', margin: '0 auto', padding: '0 24px' }}>
+        <div style={{ marginBottom: '80px', textAlign: 'center' }}>
+          <h2 style={{ fontSize: 'clamp(1.875rem, 4vw, 2.25rem)', fontWeight: 700, letterSpacing: '-0.025em', marginBottom: '20px' }}>
+            <span className="gradient-text">{t.skills.title}</span>
+          </h2>
+          <p style={{ fontSize: '16px', color: 'var(--text-secondary)' }}>{t.skills.subtitle}</p>
+        </div>
 
-        <div className="skills-grid">
-          {skillsData.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="skills-category">
-              <h3 className="category-title">{category.category}</h3>
-              <div className="skills-list">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
-                    <div className="skill-header">
-                      <div className="skill-info">
-                        <span className="skill-icon">{skill.icon}</span>
-                        <span className="skill-name">{skill.name}</span>
-                      </div>
-                      <span className="skill-level">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div 
-                        className="skill-progress" 
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
-                  </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(400px, 100%), 1fr))', gap: '32px' }}>
+          {t.skills.categories.map((cat, i) => (
+            <div
+              key={i}
+              className="rounded-2xl border transition-all duration-300"
+              style={{
+                padding: '28px',
+                backgroundColor: 'var(--bg-card)',
+                borderColor: 'var(--border)',
+                boxShadow: 'var(--shadow-sm)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'var(--accent)';
+                e.currentTarget.style.boxShadow = 'var(--shadow-glow)';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'var(--border)';
+                e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
+                <h3 style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text)' }}>{cat.name}</h3>
+              </div>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                {cat.skills.map((skill, j) => (
+                  <span
+                    key={j}
+                    className="rounded-lg"
+                    style={{
+                      padding: '6px 12px',
+                      fontSize: '12px',
+                      fontWeight: 600,
+                      backgroundColor: 'var(--accent-bg)',
+                      color: 'var(--accent)',
+                    }}
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
